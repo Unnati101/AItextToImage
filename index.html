@@ -1,42 +1,45 @@
 <!DOCTYPE html>
-  <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width , initial-scale=1.0"/>
-  <title>AI image Generator</title>
-  <!-- linking font awesome for icons -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width , initial-scale=1.0" />
+    <title>AI image Generator</title>
+    <!-- linking font awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-  <link rel="stylesheet" href="style.css"/>
-    </head>
-    <body>
-        <div class="container">
-            <!-- header -->
-            <header class="header">
-                <div class="logo-wrapper">
-                    <div class="logo">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+    <link rel="stylesheet" href="style.css" />
+</head>
 
-                    </div>
-                    <h1>AI Image Generator</h1>
+<body>
+    <div class="container">
+        <!-- header -->
+        <header class="header">
+            <div class="logo-wrapper">
+                <div class="logo">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
                 </div>
-                <button class="theme-toggle">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
-            </header>
-            
+                <h1>AI Image Generator</h1>
+            </div>
+            <button class="theme-toggle">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </header>
 
-            <div class="main-content">
-                <form action="#"  class="prompt-form">
-                    <!-- prompt container -->
-                     <div  class="prompt-container">
-                        <textarea class="prompt-input" placeholder="Describe your imagination in detail..." required autofocus></textarea>
-                   
+
+        <div class="main-content">
+            <form action="#" class="prompt-form">
+                <!-- prompt container -->
+                <div class="prompt-container">
+                    <textarea class="prompt-input" placeholder="Describe your imagination in detail..." required
+                        autofocus></textarea>
+
                     <button type="button" class="prompt-btn">
                         <i class="fa-solid fa-dice"></i>
                     </button>
-                    </div>
+                </div>
 
-                    <!-- prompt action buttons -->
+                <!-- prompt action buttons -->
                 <div class="prompt-actions">
                     <div class="select-wrapper">
                         <select class="custom-select" id="model-select" required>
@@ -46,7 +49,7 @@
                             <option value="stabiltyai/stable-diffusion-xl-base-1.0">Stable diffusion XL</option>
                             <option value="runwayml/stable-diffusion-v1-5">Stable Diffusion v1.5</option>
                             <option value="prompthero/openjourney">Open Journey</option>
-                       
+
                         </select>
                     </div>
 
@@ -57,8 +60,8 @@
                             <option value="2">2 images</option>
                             <option value="3">3 images</option>
                             <option value="4">4 images</option>
-                           
-                    
+
+
                         </select>
                     </div>
 
@@ -69,9 +72,9 @@
                             <option value="1/1">Square (1:1)</option>
                             <option value="16/9">Landscape (16:9)</option>
                             <option value="9/16">Portrait (9:16)</option>
-                           
-                    
-                    
+
+
+
                         </select>
                     </div>
 
@@ -84,9 +87,9 @@
 
                 </div>
 
-                 <!--result gallery grid  -->
+                <!--result gallery grid  -->
                 <div class="gallery-grid">
-                    <div class="img-card loading">
+                    <!-- <div class="img-card loading">
                         <div class="status-container">
                             <div class="spinner"></div>
                             <i class="fa-solid fa-triangle-exclamation"></i>
@@ -99,14 +102,13 @@
                             </button>
                          </div>
                    
-                    </div>
-                 </div>
-                </form>
-            </div>
+                    </div> -->
+                </div>
+            </form>
         </div>
+    </div>
 
-        <script src="script.js"></script>
-    </body>
-  
+    <script src="script.js"></script>
+</body>
+
 </html>
-

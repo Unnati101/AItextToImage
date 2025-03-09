@@ -27,24 +27,24 @@ const examplePrompts = [
 
 //set theme based on saved preference or system default
 
-(()=>{
+(() => {
     const savedTheme = localStorage.getItem("theme");
     const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-    const isDarkTheme = savedTheme==="dark" || (!savedTheme && systemPrefersDark);
+    const isDarkTheme = savedTheme === "dark" || (!savedTheme && systemPrefersDark);
     document.body.classList.toggle("dark-theme", isDarkTheme);
     themeToggle.querySelector("i").className = isDarkTheme ? "fa-solid fa-sun" : "fa-solid fa-moon";
 })();
 
 //switch between light and dark themes
-const toggleTheme =()=>{
-    const isDarkTheme =document.body.classList.toggle("dark-theme");
+const toggleTheme = () => {
+    const isDarkTheme = document.body.classList.toggle("dark-theme");
     localStorage.setItem("theme", isDarkTheme ? "dark" : "light");
     themeToggle.querySelector("i").className = isDarkTheme ? "fa-solid fa-sun" : "fa-solid fa-moon";
 };
 
 
-const generateImages = (selectedModel, imageCount, aspectRatio, promptText)=>{
+const generateImages = (selectedModel, imageCount, aspectRatio, promptText) => {
     const MODEL_URL = ``;
 
 }
@@ -71,7 +71,7 @@ const createImageCards = (selectedModel, imageCount, aspectRatio, promptText) =>
 
 
 //handle form submission
-const handleFormSubmit = (e)=>{
+const handleFormSubmit = (e) => {
     e.preventDefault();
 
 
@@ -85,13 +85,13 @@ const handleFormSubmit = (e)=>{
 
     console.log(selectedModel, imageCount, aspectRatio, promptText);
 
-
+    createImageCards(selectedModel, imageCount, aspectRatio, promptText);
 };
 //fill prompt input with random example
-promptBtn.addEventListener("click", ()=>{
-     const prompt = examplePrompts[Math.floor(Math.random() * examplePrompts.length)];
-     promptInput.value = prompt;
-     promptInput.focus();
+promptBtn.addEventListener("click", () => {
+    const prompt = examplePrompts[Math.floor(Math.random() * examplePrompts.length)];
+    promptInput.value = prompt;
+    promptInput.focus();
 });
 
 promptForm.addEventListener("submit", handleFormSubmit);
